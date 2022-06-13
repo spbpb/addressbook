@@ -27,8 +27,7 @@ pipeline {
         }
         stage ('kubernetes deployment') {
             steps {
-//                 sh 'kubectl apply -f deployment.yaml'
-                sh 'kubectl set image deployment addressbook addressbook=sivaplv30/addressbook:$BUILD_NUMBER'
+               sh 'kubectl apply -f deployment.yaml'
                 
             }
         }
