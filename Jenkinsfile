@@ -28,7 +28,7 @@ pipeline {
         stage ('kubernetes deployment') {
             steps {
                sh 'sudo kubectl apply -f deployment.yaml'
-               sh 'sudo kubectl apply -f add-svc.yaml'
+               
                 
             }
         }
