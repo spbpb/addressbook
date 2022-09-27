@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       name: ab
-    spec:
-      containers:
-        - name: addressbook
-          image: sivaplv30/addressbook:latest
+  spec:
+    containers:
+      - name: addressbook
+        image: sivaplv30/addressbook:latest
