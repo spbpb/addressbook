@@ -1,15 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ab-service
-  labels:
-    name: voting-service
-    app: demo-voting-app
+  name: addressbook
 spec:
+  selector:
+    role: ab
   ports:
-  - port: 49153
-    targetPort: 49153
-    type: LoadBalancer
-    selector:
-      name: addressbook
-      app: addressbook
+    - port: 80
+      targetPort: 80
+      nodePort: 31000
+  type: NodePort
