@@ -1,17 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ab
+  name: addressbook
   labels:
-    role: ab
+    role: addressbook
 spec:
+  minReadySeconds: 20
   replicas: 3
   selector:
     matchLabels:
-      role: ab 
+      role: addressbook
   template:
     metadata:
-      name: ab
+      name: addressbook
+      labels:
+        app: addressbook
+        role: addressbook
     spec:
       containers:
         - name: addressbook
