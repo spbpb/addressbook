@@ -13,7 +13,7 @@ spec:
    - name: addressbook
      image: devopsxprts/addressbook:latest
      ports:
-     - containerPort: 8085
+     - containerPort: 49153
      env: 
      - name: ALLOW_EMPTY_PASSWORD
        value: "yes"
