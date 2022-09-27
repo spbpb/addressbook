@@ -18,7 +18,7 @@ pipeline {
         }
         stage ('build and push docker image') {
             steps {
-                sh 'sudo docker build -t sivaplv30/addressbook:$BUILD_NUMBER .'
+                sh 'sudo docker build -t sivaplv30/addressbook:latest .'
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]) {
                     sh "sudo docker login -u ${env.user} -p ${env.pass}"
                     sh 'sudo docker push sivaplv30/addressbook:$BUILD_NUMBER'
