@@ -28,7 +28,7 @@ pipeline {
         stage ('kubernetes deployment') {
             steps {
                sh 'sudo kubectl apply -f deployment.yaml'
-               sh 'kubectl expose deployment addressbook --type=LoadBalancer'
+               sh 'sudo kubectl expose deployment addressbook --type=LoadBalancer'
             }
         }
 
