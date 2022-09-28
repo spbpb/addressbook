@@ -5,8 +5,7 @@ metadata:
   labels:
     role: addressbook
 spec:
-  minReadySeconds: 20
-  replicas: 3
+  replicas: 12
   selector:
     matchLabels:
       role: addressbook
@@ -14,9 +13,8 @@ spec:
     metadata:
       name: addressbook
       labels:
-        app: addressbook
         role: addressbook
     spec:
       containers:
-        - name: addressbook
+        - name: app
           image: sivaplv30/addressbook:latest
