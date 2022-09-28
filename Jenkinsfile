@@ -27,7 +27,7 @@ pipeline {
         }
         stage ('kubernetes deployment') {
             steps {
-               sh 'sudo kubectl apply -f add-dep.yaml'
+               sh 'sudo kubectl apply -f deployment.yaml'
             }
         }
 
